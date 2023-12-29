@@ -1,0 +1,3 @@
+[submodule "Hadoop-HW1"]
+	path = Hadoop-HW1
+	url = https://github.com/NikitaKononov/Hadoop-HW1
