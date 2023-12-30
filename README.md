@@ -53,6 +53,25 @@ docker-compose exec kafka kafka-topics.sh --bootstrap-server kafka:9092 --create
 
 # Блок 2 (Flink Window)
 
+консьюмер и продюсер запускаются аналогично 1 и 3му блокам
+
+### TumblingEventTimeWindows
+
+```
+docker-compose exec jobmanager ./bin/flink run -py /opt/pyflink/device_job_tumbling.py -d
+```
+
+### SlidingEventTimeWindows
+
+```
+docker-compose exec jobmanager ./bin/flink run -py /opt/pyflink/device_job_sliding.py -d
+```
+
+### EventTimeSessionWindows
+
+```
+docker-compose exec jobmanager ./bin/flink run -py /opt/pyflink/device_job_session.py -d
+```
 
 # Блок 3 (Kafka backoff)
 
